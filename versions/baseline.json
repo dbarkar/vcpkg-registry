@@ -1,0 +1,8 @@
+{
+  "default": {
+    "libadlmidi": {
+      "baseline": "1.5.1",
+      "port-version": 0
+    }
+  }
+}
