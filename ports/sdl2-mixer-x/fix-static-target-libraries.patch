@@ -1,0 +1,13 @@
+diff --git forkSrcPrefix/CMakeLists.txt forkDstPrefix/CMakeLists.txt
+index 6c1a5e9770327a7c6068b8253534587d7669e4e3..5d5f7d6e676e692e01a129322a6e3ef3720fc9de 100644
+--- forkSrcPrefix/CMakeLists.txt
++++ forkDstPrefix/CMakeLists.txt
+@@ -413,7 +413,7 @@ if(SDL_MIXER_X_STATIC AND NOT BUILD_AS_VB6_BINDING)
+     else()
+         set_target_properties(SDL2_mixer_ext_Static PROPERTIES OUTPUT_NAME SDL2_mixer_ext)
+     endif()
+-    target_link_libraries(SDL2_mixer_ext_Static PUBLIC ${SDLMixerX_LINK_LIBS})
++    target_link_libraries(SDL2_mixer_ext_Static PRIVATE $<BUILD_INTERFACE:${SDLMixerX_LINK_LIBS}>)
+     target_compile_definitions(SDL2_mixer_ext_Static PRIVATE ${SDL_MIXER_DEFINITIONS})
+     target_include_directories(SDL2_mixer_ext_Static PRIVATE
+         ${SDLMixerX_SOURCE_DIR}/include

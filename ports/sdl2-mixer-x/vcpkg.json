@@ -1,0 +1,28 @@
+{
+  "name": "sdl2-mixer-x",
+  "version-date": "2023-02-04",
+  "description": "An audio mixer library based on the SDL library, a fork of SDL_mixer",
+  "homepage": "https://wohlsoft.github.io/SDL-Mixer-X",
+  "dependencies": [
+    "sdl2",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+  "default-features": [
+    "libadlmidi"
+  ],
+  "features": {
+    "libadlmidi": {
+      "description": "Use libADLMIDI to play XMI, MUS, IMF and regular MIDI files",
+      "dependencies": [
+        "libadlmidi"
+      ]
+    }
+  }
+}
