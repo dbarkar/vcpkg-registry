@@ -1,12 +1,4 @@
 {
   "default": {
-    "libadlmidi": {
-      "baseline": "1.5.1",
-      "port-version": 0
-    },
-    "sdl2-mixer-x": {
-      "baseline": "2023-02-04",
-      "port-version": 0
-    }
   }
 }
