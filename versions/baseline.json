@@ -1,4 +1,8 @@
 {
   "default": {
+    "libsmacker": {
+      "baseline": "1.2.0",
+      "port-version": 0
+    }
   }
 }
