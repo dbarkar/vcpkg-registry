@@ -1,8 +1,8 @@
 {
   "name": "libsmacker",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "libsmacker is a cross-platform C library which can be used for decoding Smacker Video files produced by RAD Game Tools",
-  "homepage": "https://libsmacker.sourceforge.net",
+  "homepage": "https://github.com/dbarkar/libsmacker",
   "license": "LGPL-2.1-or-later",
   "dependencies": [
     {

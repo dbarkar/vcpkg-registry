@@ -1,15 +1,10 @@
-vcpkg_from_sourceforge(
+vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO libsmacker
-    REF libsmacker-1.2
-    FILENAME "libsmacker-1.2.0r43.tar.gz"
-    SHA512 1785b000884a6f93b621c1503adef100ac9b8c6e7ed5ef4d85b9ea4819715c40f9af3d930490b33ca079f531103acc69de2a800756ed7678c820ff155f86aaeb
-    PATCHES
-        audio-only-files-support.patch # Required for Heroes of Might & Magic II videos
+    REPO dbarkar/libsmacker
+    REF 2e2b136ba45647135f06474d1cb920ab03a0e7a3
+    SHA512 a34d8b237fc0903822f60e5601ad69e522401873ffe7cc4380e398b91a362ff4fe2e8afbad76df84a7366122f14ed0c5f45d24bb18e7d802f0c0d4f3db85e6e0
+    HEAD_REF master
 )
-
-file(COPY "${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt" DESTINATION "${SOURCE_PATH}")
-file(COPY "${CMAKE_CURRENT_LIST_DIR}/smacker.def" DESTINATION "${SOURCE_PATH}")
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
     FEATURES
@@ -25,7 +20,7 @@ vcpkg_cmake_configure(
 )
 
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(PACKAGE_NAME unofficial-libsmacker)
+vcpkg_cmake_config_fixup(PACKAGE_NAME libsmacker)
 vcpkg_copy_pdbs()
 
 file(REMOVE_RECURSE 
